@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | J³ Print & Press</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><img src="./logo.jpg/logo.jpg" alt="J³ Print & Press Logo"><span>J³ Print & Press</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="contact.html">Order</a>
+        </nav>
+    </header>
+
+    <section class="page order-page">
+        <h1 class="center">Place Your Order</h1>
+
+        <!-- GUIDE -->
+        <div class="order-guide">
+            <h3>How to Order</h3>
+            <ol>
+                <li>Fill out the order form with your correct details.</li>
+                <li>Select the product you want printed.</li>
+                <li>Add quantity, size, and design notes.</li>
+                <li>Click <strong>Generate Order</strong> and copy the summary.</li>
+                <li>Send the order via Facebook Messenger or Email for confirmation.</li>
+            </ol>
+        </div>
+
+        <!-- FORM -->
+        <form id="orderForm" class="order-form">
+            <input id="custName" placeholder="Full Name" required>
+            <input id="contact" placeholder="Contact Number" required>
+            <input id="loc" placeholder="Location" required>
+
+            <select id="orderType" required>
+                <option value="">Select Product</option>
+                <option>Sublimation Mug</option>
+                <option>Giveaways & Souvenirs</option>
+                <option>Onsite Souvenirs</option>
+                <option>T-Shirt Printing</option>
+                <option>PVC ID</option>
+                <option>Lamination</option>
+            </select>
+
+            <textarea id="notes" placeholder="Quantity, size, design notes"></textarea>
+
+            <button class="btn primary">Generate Order</button>
+        </form>
+
+        <!-- SUMMARY -->
+        <div id="summaryBox" class="summary-box">
+            <h3>Your Order Summary</h3>
+            <textarea id="summaryText" readonly></textarea>
+            <button onclick="copyOrder()" class="btn">Copy Order</button>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="contact-card">
+            <div>
+                <p><strong>📍 Location</strong></p>
+                <p>San Mateo, Rizal</p>
+            </div>
+            <div>
+                <p><strong>📧 Email</strong></p>
+                <p>thrutheloops2020@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- FACEBOOK CTA -->
+        <div class="fb-contact">
+            <p>Prefer chatting? Message us directly on Facebook!</p>
+            <a href="https://www.facebook.com/profile.php?id=61578288680931" target="_blank" class="fb-btn">
+                💬 Message Us on Facebook
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <div id="successPopup" class="success-popup">
+        <div class="popup-card">
+            <div class="checkmark">✓</div>
+            <h2>Order Generated!</h2>
+            <p>Your order is ready. Copy it and send it to us for confirmation.</p>
+
+            <div class="popup-actions">
+                <button onclick="copyOrder()" class="btn primary">Copy Order</button>
+                <button onclick="closePopup()" class="btn outline">Close</button>
+            </div>
+
+            <a href="https://www.facebook.com/YOURPAGEHERE" target="_blank" class="popup-fb">
+                💬 Message us on Facebook
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

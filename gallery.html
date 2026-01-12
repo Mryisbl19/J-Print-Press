@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery | J³ Print & Press</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="./logo.jpg/logo.jpg" alt="Logo">
+            <span>J³ Print & Press</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a class="active" href="gallery.html">Gallery</a>
+            <a href="contact.html">Order</a>
+        </nav>
+    </header>
+
+    <section class="page">
+        <h2 class="center">Our Event Gallery</h2>
+
+        <div class="event-grid">
+
+            <!-- Xia -->
+            <div class="event-card" onclick="openEvent('xia')">
+                <img src="./Xia's 7th Bday/1.jpg" alt="Xia's 7th Birthday">
+                <h3>🎉 Xia's 7th Birthday</h3>
+            </div>
+
+            <!-- Wedding -->
+            <div class="event-card" onclick="openEvent('wedding')">
+                <img src="./Mikko & Khariza's Wedding/1.jpg" alt="Wedding">
+                <h3>💍 Mikko & Khariza's Wedding</h3>
+            </div>
+
+            <!-- Ila -->
+            <div class="event-card" onclick="openEvent('ila')">
+                <img src="./Ila's 7th Birthday!/1.jpg" alt="Ila's Birthday">
+                <h3>🎉 Ila's 7th Birthday</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <span class="arrow left" onclick="prevImage()">❮</span>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img">
+            <p id="lightbox-caption"></p>
+        </div>
+
+        <span class="arrow right" onclick="nextImage()">❯</span>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <span class="arrow left" onclick="prevImage()">❮</span>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img">
+            <p id="lightbox-caption"></p>
+        </div>
+
+        <span class="arrow right" onclick="nextImage()">❯</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
